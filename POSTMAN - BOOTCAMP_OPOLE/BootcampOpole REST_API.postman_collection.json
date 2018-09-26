@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "355a1e1d-cd4a-49cc-b276-2396a755ef7a",
+		"name": "BootcampOpole REST_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Seria niefortunncyh zdarzeń",
+							"type": "text"
+						},
+						{
+							"key": "author_id",
+							"value": "28",
+							"type": "text"
+						},
+						{
+							"key": "{",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}",
+					"host": [
+						"{{BASE_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddAuthor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kononowicz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://bootcamp-postman.opole.pl/9mjx/authors",
+					"protocol": "http",
+					"host": [
+						"bootcamp-postman",
+						"opole",
+						"pl"
+					],
+					"path": [
+						"9mjx",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://bootcamp-postman.opole.pl/9mjx/rates",
+					"protocol": "http",
+					"host": [
+						"bootcamp-postman",
+						"opole",
+						"pl"
+					],
+					"path": [
+						"9mjx",
+						"rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBooksList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://bootcamp.opole.pl/books/add-book/9mjx",
+					"protocol": "http",
+					"host": [
+						"bootcamp",
+						"opole",
+						"pl"
+					],
+					"path": [
+						"books",
+						"add-book",
+						"9mjx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBookByID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Himen i krasnoludki",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Himen i krasnoludki",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://bootcamp-postman.opole.pl/9mjx/books/26",
+					"protocol": "http",
+					"host": [
+						"bootcamp-postman",
+						"opole",
+						"pl"
+					],
+					"path": [
+						"9mjx",
+						"books",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRateByID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://bootcamp-postman.opole.pl/9mjx/rates/26",
+					"protocol": "http",
+					"host": [
+						"bootcamp-postman",
+						"opole",
+						"pl"
+					],
+					"path": [
+						"9mjx",
+						"rates",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRatesList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://bootcamp-postman.opole.pl/9mjx/rates",
+					"protocol": "http",
+					"host": [
+						"bootcamp-postman",
+						"opole",
+						"pl"
+					],
+					"path": [
+						"9mjx",
+						"rates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
